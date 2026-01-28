@@ -10,7 +10,7 @@ app.get('/product/:id',(req,res)=>{
 
 app.get('/todo/:id',(req,res)=>{
   console.log("todo",req.params.id);
-  res.send("This is a todo route");
+  res.send("This is a todo page");
 });
 
 app.listen(3000,()=>{
