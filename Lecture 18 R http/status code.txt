@@ -1,0 +1,90 @@
+Status code range
+
+100-199 -> information
+200-299 -> success
+300-399 -> redirection
+400-499 -> client side error
+500-599 -> server side error
+
+| Code | Name                | Meaning                                               |
+| ---- | ------------------- | ----------------------------------------------------- |
+| 100  | Continue            | Request received, continue sending body               |
+| 101  | Switching Protocols | Server switching protocol (e.g., HTTP → WebSocket)    |
+| 102  | Processing          | Server has received and is processing request         |
+| 103  | Early Hints         | Used to return response headers before final response |
+
+
+| Code | Name                          | Meaning                                    |
+| ---- | ----------------------------- | ------------------------------------------ |
+| 200  | OK                            | Request successful                         |
+| 201  | Created                       | Resource successfully created              |
+| 202  | Accepted                      | Request accepted but not completed         |
+| 203  | Non-Authoritative Information | Modified response from proxy               |
+| 204  | No Content                    | Success, but no response body              |
+| 205  | Reset Content                 | Client should reset document view          |
+| 206  | Partial Content               | Partial resource returned (range requests) |
+| 207  | Multi-Status                  | Multiple status codes (WebDAV)             |
+| 208  | Already Reported              | WebDAV                                     |
+| 226  | IM Used                       | Instance manipulation used                 |
+
+
+| Code | Name               | Meaning                               |
+| ---- | ------------------ | ------------------------------------- |
+| 300  | Multiple Choices   | Multiple possible responses           |
+| 301  | Moved Permanently  | Resource permanently moved            |
+| 302  | Found              | Temporarily moved                     |
+| 303  | See Other          | Redirect with GET                     |
+| 304  | Not Modified       | Cached version valid                  |
+| 305  | Use Proxy          | Must access via proxy (deprecated)    |
+| 306  | Unused             | Reserved                              |
+| 307  | Temporary Redirect | Temporary redirect (method unchanged) |
+| 308  | Permanent Redirect | Permanent redirect (method unchanged) |
+
+
+| Code | Name                            | Meaning                             |
+| ---- | ------------------------------- | ----------------------------------- |
+| 400  | Bad Request                     | Invalid request syntax              |
+| 401  | Unauthorized                    | Authentication required             |
+| 402  | Payment Required                | Reserved for future use             |
+| 403  | Forbidden                       | Access denied                       |
+| 404  | Not Found                       | Resource not found                  |
+| 405  | Method Not Allowed              | HTTP method not allowed             |
+| 406  | Not Acceptable                  | Cannot produce requested response   |
+| 407  | Proxy Authentication Required   | Proxy auth required                 |
+| 408  | Request Timeout                 | Client timeout                      |
+| 409  | Conflict                        | Request conflicts with server state |
+| 410  | Gone                            | Resource permanently removed        |
+| 411  | Length Required                 | Content-Length required             |
+| 412  | Precondition Failed             | Condition in headers failed         |
+| 413  | Payload Too Large               | Request body too large              |
+| 414  | URI Too Long                    | URL too long                        |
+| 415  | Unsupported Media Type          | Invalid content type                |
+| 416  | Range Not Satisfiable           | Invalid range header                |
+| 417  | Expectation Failed              | Expect header failed                |
+| 418  | I'm a teapot                    | April Fools joke (RFC 2324)         |
+| 421  | Misdirected Request             | Wrong server                        |
+| 422  | Unprocessable Entity            | Semantic errors                     |
+| 423  | Locked                          | Resource locked                     |
+| 424  | Failed Dependency               | Dependency failed                   |
+| 425  | Too Early                       | Server unwilling to process         |
+| 426  | Upgrade Required                | Switch protocol required            |
+| 428  | Precondition Required           | Requires conditional request        |
+| 429  | Too Many Requests               | Rate limiting                       |
+| 431  | Request Header Fields Too Large | Headers too large                   |
+| 451  | Unavailable For Legal Reasons   | Blocked by law                      |
+
+
+
+| Code | Name                            | Meaning                        |
+| ---- | ------------------------------- | ------------------------------ |
+| 500  | Internal Server Error           | Generic server error           |
+| 501  | Not Implemented                 | Method not supported           |
+| 502  | Bad Gateway                     | Invalid response from upstream |
+| 503  | Service Unavailable             | Server overloaded/down         |
+| 504  | Gateway Timeout                 | Upstream timeout               |
+| 505  | HTTP Version Not Supported      | Unsupported HTTP version       |
+| 506  | Variant Also Negotiates         | Configuration error            |
+| 507  | Insufficient Storage            | Not enough storage             |
+| 508  | Loop Detected                   | Infinite loop detected         |
+| 510  | Not Extended                    | Further extensions required    |
+| 511  | Network Authentication Required | Network auth required          |
