@@ -1,0 +1,137 @@
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % l
+zsh: command not found: l
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % ls
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/dhruvpachauri/Documents/Ok/Notes/Node js lectures/Lab 1/.git/
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % touch app.js
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git add .
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git commit -m"first"
+[master (root-commit) 567ac3f] first
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.js
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git config --global user.email dhruvpachauri28
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git config --global user.email dhruvpachauri28@gmail.com
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git config --global user.name dhruv1228
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git log
+commit 567ac3f7322e0110950893bdca313212b9cbe1f2 (HEAD -> master)
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 10:49:27 2026 +0530
+
+    first
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % touch abc.txt
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git add .           
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status          
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   abc.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   abc.txt
+
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git add . 
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   abc.txt
+
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git commit -m"second commit"
+[master 8ceca50] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc.txt
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git log                     
+commit 8ceca505b66de84190a01a941675a280a49a5a55 (HEAD -> master)
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 11:06:54 2026 +0530
+
+    second commit
+
+commit 567ac3f7322e0110950893bdca313212b9cbe1f2
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 10:49:27 2026 +0530
+
+    first
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git branch
+* master
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git checkout -b newbranch
+Switched to a new branch 'newbranch'
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git branch               
+  master
+* newbranch
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status                  
+On branch newbranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   abc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git add .                   
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status
+On branch newbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   abc.txt
+
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git commit -m"third commit" 
+[newbranch 85c3977] third commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git log                    
+commit 85c3977b1d314b3b59c03d5a9eabe506b9cbe8fc (HEAD -> newbranch)
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 11:24:02 2026 +0530
+
+    third commit
+
+commit 8ceca505b66de84190a01a941675a280a49a5a55 (master)
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 11:06:54 2026 +0530
+
+    second commit
+
+commit 567ac3f7322e0110950893bdca313212b9cbe1f2
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Wed Jan 7 10:49:27 2026 +0530
+
+    first
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git checkout master
+Switched to branch 'master'
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % ls
+abc.txt	app.js
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git branch 
+* master
+  newbranch
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git merge newbranch
+Updating 8ceca50..85c3977
+Fast-forward
+ abc.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % git status
+On branch master
+nothing to commit, working tree clean
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lab 1 % 
