@@ -1,0 +1,68 @@
+Last login: Thu Jan  8 08:41:20 on console
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/dhruvpachauri/Documents/Ok/Notes/Node js lectures/Lecture 2/.git/
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % ls -a
+.	..	.git
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % touch abc.txt
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	abc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git add .
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git commit -m"First commit"
+[master (root-commit) 4e3eb55] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.txt
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git status
+On branch master
+nothing to commit, working tree clean
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git log
+commit 4e3eb55072b1af8856375b9498b013d7dfae61d4 (HEAD -> master)
+Author: dhruv1228 <dhruvpachauri28@gmail.com>
+Date:   Thu Jan 8 13:08:34 2026 +0530
+
+    First commit
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git remote add origin https://github.com/dhruv1228/Node-js-class-work-1.git
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git remote -v
+origin	https://github.com/dhruv1228/Node-js-class-work-1.git (fetch)
+origin	https://github.com/dhruv1228/Node-js-class-work-1.git (push)
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git push -u origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 211 bytes | 211.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/dhruv1228/Node-js-class-work-1/pull/new/master
+remote: 
+To https://github.com/dhruv1228/Node-js-class-work-1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+dhruvpachauri@Dhruvs-MacBook-Air-2 Lecture 2 % 
