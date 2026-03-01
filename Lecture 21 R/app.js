@@ -6,9 +6,9 @@ const filePath=path.join(__dirname,'abc.txt');
 
 const server=http.createServer((req,res)=>{
   if(req.url==='/'){
-    const timeStamp = new Date().toISOString()+'\n';
-    fs.appendFile(filePath, timeStamp, 'utf8', (err) => {
-      console.log("Failed to write");
+    const time=new Date().toISOString()+'\n';
+    fs.appendFile(filePath,time,'utf8',(err)=>{
+      console.log(err);
     });
   }
 });
